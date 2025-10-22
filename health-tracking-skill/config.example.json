@@ -1,0 +1,11 @@
+{
+  "google_sheets": {
+    "spreadsheet_id": "YOUR_SPREADSHEET_ID_HERE",
+    "credentials_path": "/path/to/your/service-account-credentials.json",
+    "tabs": {
+      "blood_pressure": "ABP",
+      "shot_schedule": "shot schedule"
+    }
+  },
+  "timezone": "America/New_York"
+}
