@@ -12,14 +12,44 @@ A Claude Code skill that allows you to quickly log blood pressure readings and t
 
 ## Installation
 
-### 1. Install Python Dependencies
+### 1. Install the Skill in Claude Code
+
+Claude Code discovers skills from specific directories. To make this skill available:
+
+**Option A: Using Claude Code's skills directory (Recommended)**
+
+```bash
+# Find your Claude Code skills directory
+# Typically: ~/.claude/skills/ or similar
+
+# Copy this skill to the Claude Code skills directory
+cp -r health-tracking-skill ~/.claude/skills/health-tracking-skill
+
+# Or create a symbolic link to keep the skill in this repo
+ln -s /path/to/claude_skills/health-tracking-skill ~/.claude/skills/health-tracking-skill
+```
+
+**Option B: Set custom skills directory**
+
+You can configure Claude Code to look for skills in a custom directory by setting the `CLAUDE_SKILLS_PATH` environment variable:
+
+```bash
+# Add to your ~/.bashrc or ~/.zshrc
+export CLAUDE_SKILLS_PATH="/path/to/claude_skills"
+```
+
+**Verify the skill is installed:**
+
+In Claude Code, you should be able to see the skill listed when you type `/` or check available skills.
+
+### 2. Install Python Dependencies
 
 ```bash
 cd health-tracking-skill
 pip install -r requirements.txt
 ```
 
-### 2. Set Up Google Sheets API
+### 3. Set Up Google Sheets API
 
 #### Create a Google Cloud Project
 
@@ -64,7 +94,7 @@ Your spreadsheet ID is in the URL:
 https://docs.google.com/spreadsheets/d/SPREADSHEET_ID_HERE/edit
 ```
 
-### 3. Configure the Skill
+### 4. Configure the Skill
 
 Copy the example configuration and fill in your details:
 
@@ -95,7 +125,7 @@ Edit `config.json`:
 - `tabs.shot_schedule`: Name of your shot schedule tab (default: "shot schedule")
 - `timezone`: Your timezone (e.g., "America/New_York", "America/Chicago", "UTC")
 
-### 4. Set Up Your Google Sheet
+### 5. Set Up Your Google Sheet
 
 Create or use an existing Google Sheet with two tabs:
 
