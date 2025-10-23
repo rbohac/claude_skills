@@ -1,6 +1,0 @@
-{
-  "name": "health",
-  "description": "Track blood pressure and testosterone shot schedule in Google Sheets",
-  "version": "1.0.0",
-  "command": "python3 health_tracker.py"
-}
